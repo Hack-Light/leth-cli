@@ -7,76 +7,72 @@ A CLI for querying blockchain data, interacting with smart contracts, transfer f
 # Table of contents
 
   <!-- toc -->
-
-- [Description](#description)
-- [Table of contents](#table-of-contents)
-- [Usage](#usage)
-- [Commands](#commands)
+* [Description](#description)
+* [Table of contents](#table-of-contents)
+* [Usage](#usage)
+* [Commands](#commands)
 <!-- tocstop -->
 
 # Usage
 
   <!-- usage -->
-
 ```sh-session
 $ npm install -g leth-cli
 $ leth COMMAND
 running command...
 $ leth (--version)
-leth-cli/1.0.0 darwin-x64 node-v18.15.0
+leth-cli/1.0.1 darwin-x64 node-v18.15.0
 $ leth --help [COMMAND]
 USAGE
   $ leth COMMAND
 ...
 ```
-
 <!-- usagestop -->
 
 # Commands
 
   <!-- commands -->
-
-- [`leth abi-add ABIPATH`](#leth-abi-add-abipath)
-- [`leth abi-delete`](#leth-abi-delete)
-- [`leth abi-functions`](#leth-abi-functions)
-- [`leth abi-list`](#leth-abi-list)
-- [`leth abi-update ABIPATH`](#leth-abi-update-abipath)
-- [`leth abi add ABIPATH`](#leth-abi-add-abipath-1)
-- [`leth abi delete`](#leth-abi-delete-1)
-- [`leth abi functions`](#leth-abi-functions-1)
-- [`leth abi list`](#leth-abi-list-1)
-- [`leth abi update ABIPATH`](#leth-abi-update-abipath-1)
-- [`leth address-balance ADDRESSORENS`](#leth-address-balance-addressorens)
-- [`leth address-generate`](#leth-address-generate)
-- [`leth address balance ADDRESSORENS`](#leth-address-balance-addressorens-1)
-- [`leth address generate`](#leth-address-generate-1)
-- [`leth contract ADDRESS ABI`](#leth-contract-address-abi)
-- [`leth contract interact ADDRESS ABI`](#leth-contract-interact-address-abi)
-- [`leth convert UNIT`](#leth-convert-unit)
-- [`leth ens-buy NAME OWNER [DURATION]`](#leth-ens-buy-name-owner-duration)
-- [`leth ens-lookup`](#leth-ens-lookup)
-- [`leth ens-search [NAME]`](#leth-ens-search-name)
-- [`leth ens buy NAME OWNER [DURATION]`](#leth-ens-buy-name-owner-duration-1)
-- [`leth ens lookup`](#leth-ens-lookup-1)
-- [`leth ens search [NAME]`](#leth-ens-search-name-1)
-- [`leth help [COMMANDS]`](#leth-help-commands)
-- [`leth plugins`](#leth-plugins)
-- [`leth plugins:install PLUGIN...`](#leth-pluginsinstall-plugin)
-- [`leth plugins:inspect PLUGIN...`](#leth-pluginsinspect-plugin)
-- [`leth plugins:install PLUGIN...`](#leth-pluginsinstall-plugin-1)
-- [`leth plugins:link PLUGIN`](#leth-pluginslink-plugin)
-- [`leth plugins:uninstall PLUGIN...`](#leth-pluginsuninstall-plugin)
-- [`leth plugins:uninstall PLUGIN...`](#leth-pluginsuninstall-plugin-1)
-- [`leth plugins:uninstall PLUGIN...`](#leth-pluginsuninstall-plugin-2)
-- [`leth plugins update`](#leth-plugins-update)
-- [`leth transfer-file FILE PRIVATEKEY`](#leth-transfer-file-file-privatekey)
-- [`leth transfer-multiple TO AMOUNT PRIVATEKEY`](#leth-transfer-multiple-to-amount-privatekey)
-- [`leth transfer-percentage TO PERCENTAGE AMOUNT PRIVATEKEY`](#leth-transfer-percentage-to-percentage-amount-privatekey)
-- [`leth transfer-single TO AMOUNT PRIVATEKEY`](#leth-transfer-single-to-amount-privatekey)
-- [`leth transfer file FILE PRIVATEKEY`](#leth-transfer-file-file-privatekey-1)
-- [`leth transfer multiple TO AMOUNT PRIVATEKEY`](#leth-transfer-multiple-to-amount-privatekey-1)
-- [`leth transfer percentage TO PERCENTAGE AMOUNT PRIVATEKEY`](#leth-transfer-percentage-to-percentage-amount-privatekey-1)
-- [`leth transfer single TO AMOUNT PRIVATEKEY`](#leth-transfer-single-to-amount-privatekey-1)
+* [`leth abi-add ABIPATH`](#leth-abi-add-abipath)
+* [`leth abi-delete`](#leth-abi-delete)
+* [`leth abi-functions`](#leth-abi-functions)
+* [`leth abi-list`](#leth-abi-list)
+* [`leth abi-update ABIPATH`](#leth-abi-update-abipath)
+* [`leth abi add ABIPATH`](#leth-abi-add-abipath-1)
+* [`leth abi delete`](#leth-abi-delete-1)
+* [`leth abi functions`](#leth-abi-functions-1)
+* [`leth abi list`](#leth-abi-list-1)
+* [`leth abi update ABIPATH`](#leth-abi-update-abipath-1)
+* [`leth address-balance ADDRESSORENS`](#leth-address-balance-addressorens)
+* [`leth address-generate`](#leth-address-generate)
+* [`leth address balance ADDRESSORENS`](#leth-address-balance-addressorens-1)
+* [`leth address generate`](#leth-address-generate-1)
+* [`leth contract ADDRESS ABI`](#leth-contract-address-abi)
+* [`leth contract interact ADDRESS ABI`](#leth-contract-interact-address-abi)
+* [`leth convert UNIT`](#leth-convert-unit)
+* [`leth ens-buy NAME OWNER [DURATION]`](#leth-ens-buy-name-owner-duration)
+* [`leth ens-lookup`](#leth-ens-lookup)
+* [`leth ens-search [NAME]`](#leth-ens-search-name)
+* [`leth ens buy NAME OWNER [DURATION]`](#leth-ens-buy-name-owner-duration-1)
+* [`leth ens lookup`](#leth-ens-lookup-1)
+* [`leth ens search [NAME]`](#leth-ens-search-name-1)
+* [`leth help [COMMANDS]`](#leth-help-commands)
+* [`leth plugins`](#leth-plugins)
+* [`leth plugins:install PLUGIN...`](#leth-pluginsinstall-plugin)
+* [`leth plugins:inspect PLUGIN...`](#leth-pluginsinspect-plugin)
+* [`leth plugins:install PLUGIN...`](#leth-pluginsinstall-plugin-1)
+* [`leth plugins:link PLUGIN`](#leth-pluginslink-plugin)
+* [`leth plugins:uninstall PLUGIN...`](#leth-pluginsuninstall-plugin)
+* [`leth plugins:uninstall PLUGIN...`](#leth-pluginsuninstall-plugin-1)
+* [`leth plugins:uninstall PLUGIN...`](#leth-pluginsuninstall-plugin-2)
+* [`leth plugins update`](#leth-plugins-update)
+* [`leth transfer-file FILE PRIVATEKEY`](#leth-transfer-file-file-privatekey)
+* [`leth transfer-multiple TO AMOUNT PRIVATEKEY`](#leth-transfer-multiple-to-amount-privatekey)
+* [`leth transfer-percentage TO PERCENTAGE AMOUNT PRIVATEKEY`](#leth-transfer-percentage-to-percentage-amount-privatekey)
+* [`leth transfer-single TO AMOUNT PRIVATEKEY`](#leth-transfer-single-to-amount-privatekey)
+* [`leth transfer file FILE PRIVATEKEY`](#leth-transfer-file-file-privatekey-1)
+* [`leth transfer multiple TO AMOUNT PRIVATEKEY`](#leth-transfer-multiple-to-amount-privatekey-1)
+* [`leth transfer percentage TO PERCENTAGE AMOUNT PRIVATEKEY`](#leth-transfer-percentage-to-percentage-amount-privatekey-1)
+* [`leth transfer single TO AMOUNT PRIVATEKEY`](#leth-transfer-single-to-amount-privatekey-1)
 
 ## `leth abi-add ABIPATH`
 
@@ -195,7 +191,7 @@ EXAMPLES
   $ leth abi add ./erc20ABI.json
 ```
 
-_See code: [dist/commands/abi/add.ts](https://github.com/Hack-Light/leth-cli/blob/v1.0.0/dist/commands/abi/add.ts)_
+_See code: [dist/commands/abi/add.ts](https://github.com/Hack-Light/leth-cli/blob/v1.0.1/dist/commands/abi/add.ts)_
 
 ## `leth abi delete`
 
@@ -215,7 +211,7 @@ EXAMPLES
   $ leth abi delete
 ```
 
-_See code: [dist/commands/abi/delete.ts](https://github.com/Hack-Light/leth-cli/blob/v1.0.0/dist/commands/abi/delete.ts)_
+_See code: [dist/commands/abi/delete.ts](https://github.com/Hack-Light/leth-cli/blob/v1.0.1/dist/commands/abi/delete.ts)_
 
 ## `leth abi functions`
 
@@ -235,7 +231,7 @@ EXAMPLES
   $ leth abi functions
 ```
 
-_See code: [dist/commands/abi/functions.ts](https://github.com/Hack-Light/leth-cli/blob/v1.0.0/dist/commands/abi/functions.ts)_
+_See code: [dist/commands/abi/functions.ts](https://github.com/Hack-Light/leth-cli/blob/v1.0.1/dist/commands/abi/functions.ts)_
 
 ## `leth abi list`
 
@@ -255,7 +251,7 @@ EXAMPLES
   $ leth abi list
 ```
 
-_See code: [dist/commands/abi/list.ts](https://github.com/Hack-Light/leth-cli/blob/v1.0.0/dist/commands/abi/list.ts)_
+_See code: [dist/commands/abi/list.ts](https://github.com/Hack-Light/leth-cli/blob/v1.0.1/dist/commands/abi/list.ts)_
 
 ## `leth abi update ABIPATH`
 
@@ -278,7 +274,7 @@ EXAMPLES
   $ leth abi update ./erc20ABI.json
 ```
 
-_See code: [dist/commands/abi/update.ts](https://github.com/Hack-Light/leth-cli/blob/v1.0.0/dist/commands/abi/update.ts)_
+_See code: [dist/commands/abi/update.ts](https://github.com/Hack-Light/leth-cli/blob/v1.0.1/dist/commands/abi/update.ts)_
 
 ## `leth address-balance ADDRESSORENS`
 
@@ -395,7 +391,7 @@ EXAMPLES
   $ leth address balance 0xF51CD0d607c82db2B70B678554c52C266a9D49B6 --mainnet --wei
 ```
 
-_See code: [dist/commands/address/balance.ts](https://github.com/Hack-Light/leth-cli/blob/v1.0.0/dist/commands/address/balance.ts)_
+_See code: [dist/commands/address/balance.ts](https://github.com/Hack-Light/leth-cli/blob/v1.0.1/dist/commands/address/balance.ts)_
 
 ## `leth address generate`
 
@@ -420,7 +416,7 @@ EXAMPLES
   $ lethaddress generate --export
 ```
 
-_See code: [dist/commands/address/generate.ts](https://github.com/Hack-Light/leth-cli/blob/v1.0.0/dist/commands/address/generate.ts)_
+_See code: [dist/commands/address/generate.ts](https://github.com/Hack-Light/leth-cli/blob/v1.0.1/dist/commands/address/generate.ts)_
 
 ## `leth contract ADDRESS ABI`
 
@@ -514,7 +510,7 @@ EXAMPLES
   > await contract.setterFunction({value: '10000000000000'})
 ```
 
-_See code: [dist/commands/contract/interact.ts](https://github.com/Hack-Light/leth-cli/blob/v1.0.0/dist/commands/contract/interact.ts)_
+_See code: [dist/commands/contract/interact.ts](https://github.com/Hack-Light/leth-cli/blob/v1.0.1/dist/commands/contract/interact.ts)_
 
 ## `leth convert UNIT`
 
@@ -539,7 +535,7 @@ EXAMPLES
   $ leth convert 1 --wei
 ```
 
-_See code: [dist/commands/convert.ts](https://github.com/Hack-Light/leth-cli/blob/v1.0.0/dist/commands/convert.ts)_
+_See code: [dist/commands/convert.ts](https://github.com/Hack-Light/leth-cli/blob/v1.0.1/dist/commands/convert.ts)_
 
 ## `leth ens-buy NAME OWNER [DURATION]`
 
@@ -684,7 +680,7 @@ EXAMPLES
   $ leth ens buy 0xtumenD.eth 0x33C17B73D8F961Fd98a7f180a8d7a9B32aCB4ECE 1 --goerli --privateKey [PRIVATE-KEY]
 ```
 
-_See code: [dist/commands/ens/buy.ts](https://github.com/Hack-Light/leth-cli/blob/v1.0.0/dist/commands/ens/buy.ts)_
+_See code: [dist/commands/ens/buy.ts](https://github.com/Hack-Light/leth-cli/blob/v1.0.1/dist/commands/ens/buy.ts)_
 
 ## `leth ens lookup`
 
@@ -721,7 +717,7 @@ EXAMPLES
   $ leth ens lookup --mainnet --address 0x00..00
 ```
 
-_See code: [dist/commands/ens/lookup.ts](https://github.com/Hack-Light/leth-cli/blob/v1.0.0/dist/commands/ens/lookup.ts)_
+_See code: [dist/commands/ens/lookup.ts](https://github.com/Hack-Light/leth-cli/blob/v1.0.1/dist/commands/ens/lookup.ts)_
 
 ## `leth ens search [NAME]`
 
@@ -757,7 +753,7 @@ EXAMPLES
   $ leth ens search --mainnet myensdomain.eth
 ```
 
-_See code: [dist/commands/ens/search.ts](https://github.com/Hack-Light/leth-cli/blob/v1.0.0/dist/commands/ens/search.ts)_
+_See code: [dist/commands/ens/search.ts](https://github.com/Hack-Light/leth-cli/blob/v1.0.1/dist/commands/ens/search.ts)_
 
 ## `leth help [COMMANDS]`
 
@@ -833,7 +829,7 @@ ALIASES
   $ leth plugins add
 
 EXAMPLES
-  $ leth plugins:install myplugin
+  $ leth plugins:install myplugin 
 
   $ leth plugins:install https://github.com/someuser/someplugin
 
@@ -898,7 +894,7 @@ ALIASES
   $ leth plugins add
 
 EXAMPLES
-  $ leth plugins:install myplugin
+  $ leth plugins:install myplugin 
 
   $ leth plugins:install https://github.com/someuser/someplugin
 
@@ -1204,7 +1200,7 @@ EXAMPLES
   $ leth transfer file ./test.csv PRIVATE_KEY
 ```
 
-_See code: [dist/commands/transfer/file.ts](https://github.com/Hack-Light/leth-cli/blob/v1.0.0/dist/commands/transfer/file.ts)_
+_See code: [dist/commands/transfer/file.ts](https://github.com/Hack-Light/leth-cli/blob/v1.0.1/dist/commands/transfer/file.ts)_
 
 ## `leth transfer multiple TO AMOUNT PRIVATEKEY`
 
@@ -1242,7 +1238,7 @@ EXAMPLES
   $ leth transfer multiple 0xYourAddress1,0xYourENS,0xYourAddress3 5 PRIVATE_KEY --mainet
 ```
 
-_See code: [dist/commands/transfer/multiple.ts](https://github.com/Hack-Light/leth-cli/blob/v1.0.0/dist/commands/transfer/multiple.ts)_
+_See code: [dist/commands/transfer/multiple.ts](https://github.com/Hack-Light/leth-cli/blob/v1.0.1/dist/commands/transfer/multiple.ts)_
 
 ## `leth transfer percentage TO PERCENTAGE AMOUNT PRIVATEKEY`
 
@@ -1281,7 +1277,7 @@ EXAMPLES
   $ leth transfer percentage 0xYourAddress1,0xYourENS,0xYourAddress3 30,30,40 5 PRIVATE_KEY --mainet
 ```
 
-_See code: [dist/commands/transfer/percentage.ts](https://github.com/Hack-Light/leth-cli/blob/v1.0.0/dist/commands/transfer/percentage.ts)_
+_See code: [dist/commands/transfer/percentage.ts](https://github.com/Hack-Light/leth-cli/blob/v1.0.1/dist/commands/transfer/percentage.ts)_
 
 ## `leth transfer single TO AMOUNT PRIVATEKEY`
 
@@ -1319,8 +1315,7 @@ EXAMPLES
   $ leth transfer single 0xYourAddress1 5 <PRIVATE_KEY> --mainnet
 ```
 
-_See code: [dist/commands/transfer/single.ts](https://github.com/Hack-Light/leth-cli/blob/v1.0.0/dist/commands/transfer/single.ts)_
-
+_See code: [dist/commands/transfer/single.ts](https://github.com/Hack-Light/leth-cli/blob/v1.0.1/dist/commands/transfer/single.ts)_
 <!-- commandsstop -->
 
 - [`leth abi-add ABIPATH`](#leth-abi-add-name-abipath)
