@@ -1,0 +1,85 @@
+{
+  "name": "leth-cli",
+  "version": "1.0.0",
+  "description": "A CLI for querying blockchain data, interacting with smart contracts, transfer funds, generating accounts and more",
+  "author": "Onoh Somtochukwu @Hack-Light",
+  "bin": {
+    "leth": "./bin/run"
+  },
+  "homepage": "https://github.com/Hack-Light/leth-cli",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "repository": "Hack-Light/leth-cli",
+  "files": [
+    "/bin",
+    "/dist",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "dependencies": {
+    "@clack/prompts": "^0.7.0",
+    "@ensdomains/ensjs": "^3.0.0-alpha.67",
+    "@ethersproject/bignumber": "^5.7.0",
+    "@oclif/core": "^2",
+    "@oclif/plugin-help": "^5",
+    "@oclif/plugin-plugins": "^3.2.0",
+    "bignumber.js": "^9.1.1",
+    "chalk": "4.1.2",
+    "conf": "10.2.0",
+    "csv-parser": "^3.0.0",
+    "eth-ens-namehash": "^2.0.8",
+    "ethers": "5.7",
+    "picocolors": "^1.0.0"
+  },
+  "devDependencies": {
+    "@oclif/test": "^2.4.2",
+    "@types/chai": "^4",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.18.39",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "chai": "^4",
+    "eslint": "^7.32.0",
+    "eslint-config-oclif": "^4",
+    "eslint-config-oclif-typescript": "^1.0.3",
+    "mocha": "^9",
+    "oclif": "^3.11.2",
+    "shx": "^0.3.3",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.6.1",
+    "typescript": "^4.9.5"
+  },
+  "oclif": {
+    "bin": "leth",
+    "dirname": "leth",
+    "commands": "./dist/commands",
+    "plugins": [
+      "@oclif/plugin-help",
+      "@oclif/plugin-plugins"
+    ],
+    "topicSeparator": " ",
+    "topics": {
+      "hello": {
+        "description": "Say hello to the world and others"
+      }
+    }
+  },
+  "scripts": {
+    "build": "shx rm -rf dist && tsc -b",
+    "lint": "eslint . --ext .ts --config .eslintrc",
+    "postpack": "shx rm -f oclif.manifest.json",
+    "posttest": "yarn lint",
+    "prepack": "yarn build && oclif manifest && oclif readme",
+    "test": "mocha --forbid-only \"test/**/*.test.ts\"",
+    "version": "oclif readme && git add README.md"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "bugs": "https://github.com/Hack-Light/leth-cli/issues",
+  "keywords": [
+    "oclif"
+  ],
+  "types": "dist/index.d.ts"
+}

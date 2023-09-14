@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "strict": false,
+    "skipLibCheck": true,
+    "declaration": false,
+    "importHelpers": true,
+    "module": "NodeNext",
+    "outDir": "dist",
+    "rootDir": "src",
+    "target": "es2019",
+    "resolveJsonModule": true,
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": ["node_modules"]
+}

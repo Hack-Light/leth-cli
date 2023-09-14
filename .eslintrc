@@ -1,0 +1,11 @@
+{
+  "extends": [
+    "oclif",
+    "oclif-typescript"
+  ],
+  "parserOptions": {
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  }
+
+}
