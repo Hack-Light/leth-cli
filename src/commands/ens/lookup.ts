@@ -7,11 +7,6 @@ import { providerNetworkFlags } from "../../libs/flags/network-flags";
 import { getProvider } from "../../libs/provider";
 import chalk from "chalk";
 
-import { ENS } from "@ensdomains/ensjs";
-import { ethers } from "ethers";
-
-const ENSInstance = new ENS();
-
 export default class EnsLookup extends Command {
   static aliases: string[] = ["ens-lookup"];
   static description = "resolves an ens to ethereum address and vice versa";
@@ -37,13 +32,9 @@ export default class EnsLookup extends Command {
     const { flags } = await this.parse(EnsLookup);
 
     const provider = getProvider(flags);
-    await ENSInstance.setProvider(provider);
 
     if (flags.domain) {
-      const nameWrapper = await ENSInstance.contracts!.getNameWrapper()!;
-      const owner = await nameWrapper.ownerOf(
-        ethers.utils.namehash(flags.domain)
-      );
+      const owner = await provider.resolveName(flags.domain);
 
       this.log(
         `Address for domain ${flags.domain}: ${chalk.green.underline.bold(
@@ -52,11 +43,11 @@ export default class EnsLookup extends Command {
       );
     } else if (flags.address) {
       // const ensDomain = await provider.lookupAddress(flags.address);
-      const detail = await ENSInstance.getName(flags.address);
+      const detail = await provider.lookupAddress(flags.address);
 
       this.log(
         `ENS domain for address ${flags.address}: ${chalk.green.underline.bold(
-          `${detail.name || "Not found"}`
+          `${detail || "Not found"}`
         )}`
       );
     } else {
