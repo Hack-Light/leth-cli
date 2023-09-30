@@ -22,7 +22,7 @@
     "@ethersproject/bignumber": "^5.7.0",
     "@oclif/core": "^2",
     "@oclif/plugin-help": "^5",
-    "@oclif/plugin-plugins": "^3.2.0",
+    "@oclif/plugin-plugins": "^3.8.3",
     "bignumber.js": "^9.1.1",
     "chalk": "4.1.2",
     "conf": "10.2.0",
