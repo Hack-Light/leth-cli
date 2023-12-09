@@ -35,7 +35,7 @@
     "@oclif/test": "^2.4.2",
     "@types/chai": "^4",
     "@types/mocha": "^9.0.0",
-    "@types/node": "^16.18.39",
+    "@types/node": "^16.18.68",
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.7.0",
